@@ -1,0 +1,30 @@
+name: publish nuget
+
+on: 
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+            dotnet-version: '5.0.x'  # .NET版本
+      - name: Restore dependencies
+        run: dotnet restore
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+      - name: Pack
+        run: dotnet pack --configuration Release --no-build --include-symbols --include-source -o nupkgs
+      - name: Pack wwtp_paas_main_bus_service
+        run: dotnet pack src/wwtp_paas_main_bus_service/wwtp_paas_main_bus_service.csproj -c Release -o nupkgs  
+      - name: Push packages  
+        run: |
+          dotnet nuget push "nupkgs/wwtp_paas_main_bus_service.*.nupkg"
+        env:
+            NUGET_KEY: ${{secrets.NUGET_API_KEY}}  # NUGET_API_KEY要作为一个secret创建
