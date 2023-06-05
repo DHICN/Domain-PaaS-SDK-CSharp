@@ -28,7 +28,7 @@ jobs:
         run: |
             pwd
             ls -lh
-            dotnet restore 
+            dotnet restore wwtp_paas_main_bus_service/wwtp_paas_main_bus_service.csproj
             pwd
             ls -lh
       - name: Build
