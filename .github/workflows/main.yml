@@ -10,8 +10,7 @@ jobs:
         matrix: 
          project: [DHI.DSS.WWTPPaasMainBusServiceSDK]
     runs-on: ubuntu-latest
-    env:
-        NUGET_API_KEY: ${{secrets.NUGET_API_KEY}} 
+
     steps:
       - name: pre -checkout 
         run: |
@@ -38,5 +37,5 @@ jobs:
         run: dotnet pack  -c Release -o nupkgs  
       - name: Push packages 
         working-directory: src/${{ matrix.project }} 
-        run: dotnet nuget push "nupkgs/*.nupkg" -s https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_API_KEY}} --skip-duplicate
+        run: dotnet nuget push "nupkgs/*.nupkg" -s https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_API_KEY}} 
 
