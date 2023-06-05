@@ -1,1 +1,14 @@
-﻿
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<id>DHICN.PAAS.SDK</id>
+		<version>1.0.0</version>
+		<authors>wafe</authors>
+		<owners>dhicn</owners>
+		<license type="mit">MIT</license>
+		<projectUrl>https://github.com/DHICN/Domian-PaaS-SDK-CSharp</projectUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>这是一个[DHI 中国 业务中台](https://online-products.dhichina.cn/) 的 Client SDK 开发辅助包，帮您快速通过我们的业务中台构建应用。</description>
+	</metadata>
+	<files></files>
+</package>
