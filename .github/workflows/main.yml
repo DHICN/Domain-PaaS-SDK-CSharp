@@ -6,9 +6,6 @@ on:
 
 jobs:
   build:
-    strategy: 
-        matrix: 
-         project: [DHI.DSS.WWTPPaasMainBusServiceSDK]
     runs-on: ubuntu-latest
 
     steps:
@@ -27,15 +24,15 @@ jobs:
         with:
             dotnet-version: '6.0.x'  
       - name: Restore dependencies
-        working-directory: src/${{ matrix.project }} 
+        working-directory: src
         run: dotnet restore 
       - name: Build
-        working-directory: src/${{ matrix.project }} 
+        working-directory: src
         run: dotnet build  --configuration Release --no-restore
       - name: Pack 
-        working-directory: src/${{ matrix.project }} 
-        run: dotnet pack  -c Release -o nupkgs  
+        working-directory: src
+        run: dotnet pack DHICN.PAAS.SDK.sln DHICN.PAAS.SDK.nuspec -OutputDirectory nuget   
       - name: Push packages 
-        working-directory: src/${{ matrix.project }} 
+        working-directory: src
         run: dotnet nuget push "nupkgs/*.nupkg" -s https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_API_KEY}} 
 
