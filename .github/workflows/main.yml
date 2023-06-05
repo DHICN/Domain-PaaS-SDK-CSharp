@@ -8,7 +8,7 @@ jobs:
   build:
     strategy: 
         matrix: 
-         project: [DHI.DSS.IdentityServiceSDK,DHI.DSS.ModelDriverSDK,DHI.DSS.ScenarioManagerServiceSDK,DHI.DSS.WWTPPaasInfrastructureServiceSDK,DHI.DSS.WWTPPaasMainBusServiceSDK]
+         project: [DHI.DSS.IdentityServiceSDK]
     runs-on: ubuntu-latest
     env:
         NUGET_API_KEY: ${{secrets.NUGET_API_KEY}} 
