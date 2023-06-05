@@ -32,7 +32,7 @@ jobs:
       - name: Pack 
         working-directory: src
         run: |
-          dotnet pack DHICN.PAAS.SDK.sln 
+          nuget pack DHICN.PAAS.SDK.sln DHICN.PAAS.SDK.nuspec
           pwd
           ls -lh
       - name: Push packages 
