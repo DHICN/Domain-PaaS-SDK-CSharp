@@ -25,7 +25,12 @@ jobs:
             dotnet-version: '6.0.x'  # .NET°æ±¾
       - name: Restore dependencies
         working-directory: src
-        run: dotnet restore /Domian-PaaS-SDK-CSharp/Domian-PaaS-SDK-CSharp/src/wwtp_paas_main_bus_service/wwtp_paas_main_bus_service.csproj
+        run: |
+            pwd
+            ls -lh
+            dotnet restore 
+            pwd
+            ls -lh
       - name: Build
         run: dotnet build --configuration Release --no-restore
       - name: Pack
