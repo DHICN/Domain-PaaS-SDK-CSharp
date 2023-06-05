@@ -32,7 +32,7 @@ jobs:
       - name: Pack 
         working-directory: src
         run: |
-          nuget pack DHICN.PAAS.SDK.nupkgs  -OutputDirectory nupkgs
+          nuget pack DHICN.PAAS.SDK.nuspec  -OutputDirectory nupkgs
           pwd
           ls -lh
       - name: Push packages 
