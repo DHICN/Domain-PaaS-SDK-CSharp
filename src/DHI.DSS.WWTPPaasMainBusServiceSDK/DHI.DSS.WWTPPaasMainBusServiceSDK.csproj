@@ -29,7 +29,7 @@ The version of the OpenAPI document: 1.0.0
     <PackageReleaseNotes>Minor update</PackageReleaseNotes>
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>DHI.DSS.WWTPPaasMainBusServiceSDK</PackageId>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <Authors>wafe</Authors>
     <Company>dhicn</Company>
   </PropertyGroup>
