@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("OpenAPI Library")]
-[assembly: AssemblyDescription("A library generated from a OpenAPI doc")]
+[assembly: AssemblyTitle("DHI.DSS.WWTPPaasMainBusServiceSDK")]
+[assembly: AssemblyDescription("这是一个[DHI 中国 业务中台](https://online-products.dhichina.cn/) 的 Client SDK 开发辅助包，帮您快速通过我们的业务中台构建应用。")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("OpenAPI")]
-[assembly: AssemblyProduct("OpenAPILibrary")]
+[assembly: AssemblyCompany("DHICN")]
+[assembly: AssemblyProduct("WWTPPaasMainBusServiceSDK")]
 [assembly: AssemblyCopyright("No Copyright")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
