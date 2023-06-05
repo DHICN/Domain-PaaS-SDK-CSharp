@@ -8,10 +8,10 @@ jobs:
   build:
     strategy: 
         matrix: 
-         project: [wwtp_paas_main_bus_service]
+         project: [DHI.DSS.IdentityServiceSDK,DHI.DSS.ModelDriverSDK,DHI.DSS.ScenarioManagerServiceSDK,DHI.DSS.WWTPPaasInfrastructureServiceSDK,DHI.DSS.WWTPPaasMainBusServiceSDK]
     runs-on: ubuntu-latest
     env:
-        NUGET_API_KEY: ${{secrets.NUGET_API_KEY}}  # NUGET_API_KEY要作为一个secret创建
+        NUGET_API_KEY: ${{secrets.NUGET_API_KEY}} 
     steps:
       - name: pre -checkout 
         run: |
@@ -26,16 +26,13 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v1
         with:
-            dotnet-version: '6.0.x'  # .NET版本
+            dotnet-version: '6.0.x'  
       - name: Restore dependencies
         working-directory: src/${{ matrix.project }} 
         run: dotnet restore 
       - name: Build
         working-directory: src/${{ matrix.project }} 
-        run: |
-            pwd
-            ls -lh
-            dotnet build  --configuration Release --no-restore
+        run: dotnet build  --configuration Release --no-restore
       - name: Pack 
         working-directory: src/${{ matrix.project }} 
         run: dotnet pack  -c Release -o nupkgs  
