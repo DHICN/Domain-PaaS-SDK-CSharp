@@ -29,8 +29,6 @@ jobs:
       - name: Build
         working-directory: src
         run: dotnet build wwtp_paas_main_bus_service/wwtp_paas_main_bus_service.csproj --configuration Release --no-restore
-      - name: Pack
-        run: dotnet pack --configuration Release --no-build --include-symbols --include-source -o nupkgs
       - name: Pack wwtp_paas_main_bus_service
         run: dotnet pack src/wwtp_paas_main_bus_service/wwtp_paas_main_bus_service.csproj -c Release -o nupkgs  
       - name: Push packages  
