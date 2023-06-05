@@ -16,8 +16,8 @@ jobs:
         with:
             dotnet-version: '5.0.x'  # .NET°æ±¾
       - name: Restore dependencies
-        run: dotnet restore
         working-directory: src
+        run: dotnet restore src/wwtp_paas_main_bus_service/wwtp_paas_main_bus_service.csproj
       - name: Build
         run: dotnet build --configuration Release --no-restore
       - name: Pack
