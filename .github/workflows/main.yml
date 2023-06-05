@@ -31,7 +31,10 @@ jobs:
         run: dotnet build  --configuration Release --no-restore
       - name: Pack 
         working-directory: src
-        run: dotnet pack DHICN.PAAS.SDK.sln -OutputDirectory nupkgs
+        run: |
+          dotnet pack DHICN.PAAS.SDK.sln 
+          pwd
+          ls -lh
       - name: Push packages 
         working-directory: src
         run: dotnet nuget push "nupkgs/*.nupkg" -s https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_API_KEY}} 
