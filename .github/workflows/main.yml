@@ -39,6 +39,6 @@ jobs:
         working-directory: src/${{ matrix.project }} 
         run: dotnet pack  -c Release -o nupkgs  
       - name: Push packages 
-        run: dotnet nuget push "nupkgs/*.nupkg"
+        run: dotnet nuget push "nupkgs/*.nupkg" -s https://api.nuget.org/v3/index.json
         env:
             NUGET_KEY: ${{secrets.NUGET_API_KEY}}  # NUGET_API_KEY要作为一个secret创建
