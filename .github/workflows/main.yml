@@ -10,7 +10,8 @@ jobs:
         matrix: 
          project: [wwtp_paas_main_bus_service]
     runs-on: ubuntu-latest
-    
+    env:
+        NUGET_API_KEY: ${{secrets.NUGET_API_KEY}}  # NUGET_API_KEY要作为一个secret创建
     steps:
       - name: pre -checkout 
         run: |
@@ -41,5 +42,4 @@ jobs:
       - name: Push packages 
         working-directory: src/${{ matrix.project }} 
         run: dotnet nuget push "nupkgs/*.nupkg" -s https://api.nuget.org/v3/index.json
-        env:
-            NUGET_API_KEY: ${{secrets.NUGET_API_KEY}}  # NUGET_API_KEY要作为一个secret创建
+
