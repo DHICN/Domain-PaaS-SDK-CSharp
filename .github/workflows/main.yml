@@ -16,8 +16,8 @@ jobs:
         with:
             dotnet-version: '5.0.x'  # .NET°æ±¾
       - name: Restore dependencies
-        working-directory: src
         run: dotnet restore
+        working-directory: src
       - name: Build
         run: dotnet build --configuration Release --no-restore
       - name: Pack
