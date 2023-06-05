@@ -34,7 +34,7 @@ jobs:
         run: |
             pwd
             ls -lh
-            dotnet build w --configuration Release --no-restore
+            dotnet build  --configuration Release --no-restore
       - name: Pack 
         working-directory: src/${{ matrix.project }} 
         run: dotnet pack  -c Release -o nupkgs  
