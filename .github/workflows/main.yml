@@ -8,7 +8,7 @@ jobs:
   build:
     strategy: 
         matrix: 
-         project: [src/wwtp_paas_main_bus_service]
+         project: [wwtp_paas_main_bus_service]
     runs-on: ubuntu-latest
 
     steps:
@@ -29,11 +29,13 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore 
       - name: Build
+        working-directory: src/${{ matrix.project }} 
         run: dotnet build w --configuration Release --no-restore
       - name: Pack 
+        working-directory: src/${{ matrix.project }} 
         run: dotnet pack  -c Release -o nupkgs  
-      - name: Push packages  
-        run: |
-          dotnet nuget push "nupkgs/*.nupkg"
+      - name: Push packages 
+        working-directory: src/${{ matrix.project }}  
+        run: dotnet nuget push "nupkgs/*.nupkg"
         env:
             NUGET_KEY: ${{secrets.NUGET_API_KEY}}  # NUGET_API_KEY要作为一个secret创建
