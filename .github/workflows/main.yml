@@ -8,7 +8,7 @@ jobs:
   build:
     strategy: 
         matrix: 
-         project: [wwtp_paas_main_bus_service/wwtp_paas_main_bus_service.csproj]
+         project: [wwtp_paas_main_bus_service]
     runs-on: ubuntu-latest
 
     steps:
