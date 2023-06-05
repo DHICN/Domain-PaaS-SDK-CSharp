@@ -37,5 +37,5 @@ jobs:
           ls -lh
       - name: Push packages 
         working-directory: src
-        run: nuget push "nupkgs/*.nupkg" --source https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_API_KEY}} 
+        run: dotnet nuget push "nupkgs/*.nupkg"  -k ${{secrets.NUGET_API_KEY}} --source https://api.nuget.org/v3/index.json
 
