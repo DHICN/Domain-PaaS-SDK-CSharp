@@ -28,6 +28,10 @@ The version of the OpenAPI document: 1.0.0
     <PackageProjectUrl>https://github.com/GIT_USER_ID/GIT_REPO_ID</PackageProjectUrl>
     <PackageReleaseNotes>Minor update</PackageReleaseNotes>
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>DHI.DSS.IdentityServiceSDK</PackageId>
+    <Version>1.0.1</Version>
+    <Authors>wafe</Authors>
+    <Company>dhicn</Company>
   </PropertyGroup>
 
   <ItemGroup>
