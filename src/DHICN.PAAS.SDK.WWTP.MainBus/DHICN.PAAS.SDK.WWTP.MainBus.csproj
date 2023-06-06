@@ -18,12 +18,12 @@ The version of the OpenAPI document: 1.0.0
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DHICN.PAAS.SDK.WWTP.MainBus</RootNamespace>
     <AssemblyName>DHICN.PAAS.SDK.WWTP.MainBus</AssemblyName>
-    <Description>A library generated from a OpenAPI doc</Description>
+    <Description>这是一个[DHI 中国 业务中台](https://online-products.dhichina.cn/) 的 Client SDK 开发辅助包，帮您快速通过我们的业务中台构建应用。</Description>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFramework>netstandard2.0</TargetFramework>
     <FileAlignment>512</FileAlignment>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\DHICN.PAAS.SDK.WWTP.MainBus.xml</DocumentationFile>
-    <RepositoryUrl>https://github.com/GIT_USER_ID/GIT_REPO_ID.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/DHICN/Domian-PaaS-SDK-CSharp/tree/main/src/DHICN.PAAS.SDK.WWTP.MainBus/README.md</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageProjectUrl>https://github.com/GIT_USER_ID/GIT_REPO_ID</PackageProjectUrl>
     <PackageReleaseNotes>Minor update</PackageReleaseNotes>
