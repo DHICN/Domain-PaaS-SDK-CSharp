@@ -23,7 +23,7 @@ The version of the OpenAPI document: 1.0.0
     <TargetFramework>netstandard2.0</TargetFramework>
     <FileAlignment>512</FileAlignment>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\DHICN.PAAS.SDK.Identity.xml</DocumentationFile>
-    <RepositoryUrl>https://github.com/DHICN/Domian-PaaS-SDK-CSharp/tree/main/src/DHICN.PAAS.SDK.WWTP.Infrastrcuture/README.md</RepositoryUrl>
+    <RepositoryUrl>https://github.com/DHICN/Domian-PaaS-SDK-CSharp/tree/main/src/DHICN.PAAS.SDK.Identity/README.md</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageProjectUrl>https://github.com/GIT_USER_ID/GIT_REPO_ID</PackageProjectUrl>
     <PackageReleaseNotes>Minor update</PackageReleaseNotes>
