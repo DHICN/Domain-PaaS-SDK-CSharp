@@ -27,9 +27,10 @@ The version of the OpenAPI document: 1.0.0
     <RepositoryType>git</RepositoryType>
     <PackageProjectUrl>https://github.com/DHICN/Domian-PaaS-SDK-CSharp/tree/main/src/DHICN.PAAS.SDK.ScenarioManager/README.md</PackageProjectUrl>
     <PackageReleaseNotes>Minor update</PackageReleaseNotes>
-    <Version>1.0.3</Version>
+    <Version>1.0.4</Version>
 		<authors>dhicn</authors>
 		<owners>dhicn</owners>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
   <ItemGroup>
     <None Include="..\..\LICENSE.md" Pack="true" PackagePath="LICENSE.md" />
