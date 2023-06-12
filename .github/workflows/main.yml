@@ -4,9 +4,6 @@ on:
   push:
     branches: [main]
 
-env: 
-  NUGET_EXE_DIR: C:\nuget  # 设置 NUGET_EXE_DIR 环境变量
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -26,14 +23,6 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
             dotnet-version: '6.0.x'  
-      - name: Install NuGet
-        uses: actions/setup-nuget@v1
-      - name: Add .nuget
-        run: | 
-          mkdir .nuget
-          echo "<?xml version="1.0" encoding="utf-8"?><configuration></configuration>" > .nuget/NuGet.config 
-      - name: Add to PATH
-        run: echo "::add-path::${{env.NUGET_EXE_DIR}}"
       - name: Restore dependencies
         working-directory: src
         run: dotnet restore 
