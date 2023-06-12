@@ -1,22 +1,43 @@
 ## 污水业务服务
 
-主要包括以下功能模块
+DHICN.PAAS.SDK.WWTP.MainBus是一个由DHI中国提供的专业的污水领域服务的.NET的Client SDK开发辅助包
 
-智能加药功能 https://github.com/DHICN/Domian-PaaS-SDK-CSharp/tree/main/src/DHICN.PAAS.SDK.WWTP.MainBus/CalculateDosageApi.md
+### 使用示例
+获取全流程水质数据
+```csharp
+using DHICN.PAAS.SDK.WWTP.MainBus.Api;
+using DHICN.PAAS.SDK.WWTP.MainBus.Client;
+using DHICN.PAAS.SDK.WWTP.MainBus.Model;
 
-全开放性决策数据中心 https://github.com/DHICN/Domian-PaaS-SDK-CSharp/tree/main/src/DHICN.PAAS.SDK.WWTP.MainBus/GeneralDataApi.md
+namespace Domain_PaaS_SDK_Examples_CSharp
+{
+    public class GeneralDataExample
+    {
+        /// <summary>
+        /// 获取全流程水质数据
+        /// </summary>
+        /// <returns></returns>
+        public Result<List<EntireProcessWqOut>> GetEntireProcessTsByProductline()
+        {
+            string Token = "xxxx";//如需试用，请联系DHI中国获取使用许可和认证信息
+            string BasePath = "http://localhost";
+            string tenantId = "xxxx-xxxx ";
 
-历史数据查询 https://github.com/DHICN/Domian-PaaS-SDK-CSharp/tree/main/src/DHICN.PAAS.SDK.WWTP.MainBus/HistoryDataApi.md
+            Configuration configuration = new Configuration();
+            configuration.AccessToken = Token;
+            configuration.BasePath = BasePath;
+            configuration.DefaultHeader.Add("tenantId", tenantId);
+            configuration.DefaultHeader.Add("Authorization", Token);
+            GeneralDataApi instance = new GeneralDataApi(configuration);
+            string productLine = "1A";
+            string startTime = "2023-05-10 16:56:00";
+            string endTime = "2023-05-12 16:56:00";
+            string modelName = "在线滚动模型";
 
-业务服务配置导入导出相关接口实现 https://github.com/DHICN/Domian-PaaS-SDK-CSharp/tree/main/src/DHICN.PAAS.SDK.WWTP.MainBus/ImportExportApi.md
+            var response = instance.ApiV2OutputEntireProcessTsByProductlineGet(productLine, startTime, endTime, modelName);
 
-智能反硝化碳源加药 https://github.com/DHICN/Domian-PaaS-SDK-CSharp/tree/main/src/DHICN.PAAS.SDK.WWTP.MainBus/IntelligentDenitrificationApi.md
-
-智能MCCR加药 https://github.com/DHICN/Domian-PaaS-SDK-CSharp/tree/main/src/DHICN.PAAS.SDK.WWTP.MainBus/IntelligentMccrApi.md
-
-工艺模拟实验室 https://github.com/DHICN/Domian-PaaS-SDK-CSharp/tree/main/src/DHICN.PAAS.SDK.WWTP.MainBus/ProNumSimLabApi.md
-
-水质毒性预警功能 https://github.com/DHICN/Domian-PaaS-SDK-CSharp/tree/main/src/DHICN.PAAS.SDK.WWTP.MainBus/ToxicityMonitorApi.md
-
-水质模拟预测分析 https://github.com/DHICN/Domian-PaaS-SDK-CSharp/tree/main/src/DHICN.PAAS.SDK.WWTP.MainBus/WQAnalysisApi.md
-
+            return response;
+        }
+    }
+}
+```

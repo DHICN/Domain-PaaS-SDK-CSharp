@@ -27,11 +27,14 @@ The version of the OpenAPI document: 1.0.0
     <RepositoryType>git</RepositoryType>
     <PackageProjectUrl>https://github.com/DHICN/Domian-PaaS-SDK-CSharp/tree/main/src/DHICN.PAAS.SDK.WWTP.Infrastrcuture/README.md</PackageProjectUrl>
     <PackageReleaseNotes>Minor update</PackageReleaseNotes>
-    <Version>1.0.2</Version>
-		<authors>wafe</authors>
+    <Version>1.0.3</Version>
+		<authors>dhicn</authors>
 		<owners>dhicn</owners>
   </PropertyGroup>
-
+  <ItemGroup>
+    <None Include="..\..\LICENSE.md" Pack="true" PackagePath="LICENSE.md" />
+    <None Include="README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="JsonSubTypes" Version="1.5.2" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />

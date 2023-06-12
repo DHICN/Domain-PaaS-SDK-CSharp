@@ -1,8 +1,7 @@
 <h1 align="center"> Domain-PaaS-SDK for CSharp </h1>
 <div align="center">
 
- ![Python version](https://img.shields.io/pypi/pyversions/mikeio.svg)
-[![PyPI version](https://badge.fury.io/py/domain_paas_sdk_python.svg)](https://badge.fury.io/py/domain_paas_sdk_python)
+[![NuGet version (DocumentManager)](https://img.shields.io/nuget/v/DHICN.PAAS.SDK.DocumentManager.svg?style=flat-square)](https://www.nuget.org/packages/DHICN.PAAS.SDK.DocumentManager/)
   
 这是一个[DHI 中国 业务中台](https://online-products.dhichina.cn/) 的 Client SDK 开发辅助包，帮您快速通过我们的业务中台构建应用。
 
@@ -16,7 +15,7 @@
 - [x] document-service 文档服务
 - [x] scenario-compute-service 方案计算服务
 - [x] model-driver-service 模型计算服务
-- [x result-analysis-service 结果分析服务
+- [x]result-analysis-service 结果分析服务
 - [x] model-information-service 模型分析服务
 - [x] model-configuration-service 模型计算服务
 - [ ] text-search-service 全文搜索服务
