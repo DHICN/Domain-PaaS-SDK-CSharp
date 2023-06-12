@@ -1,6 +1,6 @@
-## 污水业务服务
+## 模型编辑服务
 
-DHICN.PAAS.SDK.WWTP.MainBus是一个由DHI中国提供的专业的污水领域服务的.NET的Client SDK开发辅助包
+DHICN.PAAS.SDK.ModelInformation 是一个由DHI中国提供的专业的模型编辑服务的.NET的Client SDK开发辅助包
 
 ### 使用示例
 删除方案的初始水位信息 Delete initial water level by scenario id

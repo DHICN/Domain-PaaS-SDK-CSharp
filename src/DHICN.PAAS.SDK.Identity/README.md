@@ -1,6 +1,6 @@
-## 污水业务服务
+## 用户认证管理服务
 
-DHICN.PAAS.SDK.WWTP.MainBus是一个由DHI中国提供的专业的污水领域服务的.NET的Client SDK开发辅助包
+DHICN.PAAS.SDK.Identity 是一个由DHI中国提供的专业的用户认证管理服务的.NET的Client SDK开发辅助包
 
 ### 使用示例
 增加组织机构  add organization

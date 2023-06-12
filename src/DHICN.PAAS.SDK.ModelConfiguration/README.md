@@ -1,6 +1,6 @@
-## 污水业务服务
+## 模型配置服务
 
-DHICN.PAAS.SDK.WWTP.MainBus是一个由DHI中国提供的专业的污水领域服务的.NET的Client SDK开发辅助包
+DHICN.PAAS.SDK.ModelDriver 是一个由DHI中国提供的专业的模型配置服务的.NET的Client SDK开发辅助包
 
 ### 使用示例
 创建一个新项目 Create a new project

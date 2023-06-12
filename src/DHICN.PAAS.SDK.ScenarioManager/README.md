@@ -1,6 +1,6 @@
-## 污水业务服务
+## 方案管理服务
 
-DHICN.PAAS.SDK.WWTP.MainBus是一个由DHI中国提供的专业的污水领域服务的.NET的Client SDK开发辅助包
+DHICN.PAAS.SDK.ScenarioManager是一个由DHI中国提供的专业的方案管理服务的.NET的Client SDK开发辅助包
 
 ### 使用示例
 创建方案 create new scenario
